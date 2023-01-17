@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker run -d -p 5000:5000 jenkins'
-                sh 'docker stop -t jenkins'
+                sh 'docker stop jenkins'
             }
         }
     }
