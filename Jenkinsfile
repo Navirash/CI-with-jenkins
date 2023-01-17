@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'docker exect -it jenkins python -m uniitest'
+                sh 'docker exect -t jenkins python -m uniitest'
             }
         }
         stage('Deploy') {
