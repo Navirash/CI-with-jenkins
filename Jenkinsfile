@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'docker run -d -p 5000:5000 jenkins'
+                sh 'docker run -d -p 5000:5000 jenkins'
             }
         }
     }
