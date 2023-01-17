@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build .'
+                sh 'docker build -t jenkins .'
             }
         }
         stage('Test') {
             steps {
-                echo 'Deploying....'
+                sh 'python -m unittest'
             }
         }
         stage('Deploy') {
